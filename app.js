@@ -31,7 +31,8 @@ app.use(express.urlencoded({ extended: false }));  //pegar os dados do formulari
 const pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
-    password: 'senhamysql',
+    password: '',
+    port: '3306',
     database: 'dbSalad'
 });
 
