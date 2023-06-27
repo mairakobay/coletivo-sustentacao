@@ -40,14 +40,10 @@ CREATE TABLE `user` (
 	`password` VARCHAR(255) NOT NULL
 );
 
-INSERT INTO `user` (`name`, `email`, `password`,) VALUES
+INSERT INTO `user` (`name`, `email`, `password`) VALUES
 ('Maira Kobayashi', 'mairakobay@gmail.com', '123456'),
 ('Wilson Rodrigues', 'wilson@gmail.com','123456'),
 ('Maria Inalda', 'nalda@gmail.com',' 123456'),
 ('João Silva', 'joaosilva@hotmail.com', '123456'),
 ('Maria Santos', 'mariasantos@hotmail.com', '123456'),
 ('Ricardo Reis', 'ricardoreis@hotmail.com', '123456');
-
-
-
-
