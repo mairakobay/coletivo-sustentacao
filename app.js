@@ -117,7 +117,6 @@ app.get('/saladas/:id', async (req, res, next) => {
 
 // products edit
 app.get('/saladas/:id/editar', async (req, res, next) => {
-
     try {
         const { id } = req.params;
 
@@ -138,7 +137,21 @@ app.get('/saladas/:id/editar', async (req, res, next) => {
 
 // products update
 app.post('/saladas/:id/editar', async (req, res, next) => {
+    try {
+        const { name, price, size } = req.body;
+        const { id } = req.params;
 
+        const sql = "UPDATE `salads` SET `name` = ?, `size` = ?, `price` = ? WHERE `id` = ?;";
+        const values = [name, size, price, id];
+        const [rows] = await pool.query(sql, values);
+        
+        // console.log(rows);
+
+        res.redirect(`/saladas/${id}`);
+    } catch (err) {
+        console.error(err);
+        next(new Error('Ocorreu um erro ao cadastrar o produto.'));
+    }
 });
 
 // products destroy/delete

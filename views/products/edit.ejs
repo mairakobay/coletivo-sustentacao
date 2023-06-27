@@ -8,7 +8,7 @@
         </div>
       
         <div class="editarprodutos">
-            <form action="/saladas/editar" method="post">
+            <form action="/saladas/<%= product.id %>/editar" method="post">
                 <label class="nome-produto">
                     <input type="text" name="name" id="name" placeholder="Nome do produto" value="<%= product.name %>">
                 </label>
