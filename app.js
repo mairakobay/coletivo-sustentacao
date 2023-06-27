@@ -18,8 +18,8 @@ app.use(session({
     secret: '123',
     resave: false,
     saveUninitialized: true,
-  }));
-  
+}));
+
 
 // serving static files 
 app.use(express.static('public'));
@@ -36,29 +36,29 @@ const pool = mysql.createPool({
     database: 'dbSalad'
 });
 
-app.get ('/login', (req, res) => {
-    res.render ('auth/login')
+app.get('/login', (req, res) => {
+    res.render('auth/login')
 });
 
-app.post ('/login', async (req, res) => { 
+app.post('/login', async (req, res) => {
     try {
-        const {email, password} = req.body
+        const { email, password } = req.body
         const sql = 'SELECT * FROM user WHERE email = ? limit 1';
         const [rows, fields] = await pool.query(sql, [email]);
 
         if (rows.length === 0) {
             return res.redirect('/login');
         }
-        if (password!= rows [0].password) {
+        if (password != rows[0].password) {
             return res.redirect('/login');
         }
-        req.session.user= rows[0]     
-        res.redirect ('/')
+        req.session.user = rows[0]
+        res.redirect('/')
     } catch (error) {
         console.error(error);
         throw new Error('Ocorreu um erro ao buscar o usuário por nome de usuário ou email.');
     }
-}); 
+});
 
 app.get('/', async (req, res, next) => {
     try {
@@ -86,8 +86,8 @@ app.post('/saladas/cadastrar', async (req, res, next) => {
         const sql = 'INSERT INTO salads (name, price, size) VALUES (?, ?, ?);';
         const values = [name, price, size];
         const [rows, fields] = await pool.query(sql, values);
-        
-        const  insertedId = rows.insertId;
+
+        const insertedId = rows.insertId;
         res.redirect(`/saladas/${insertedId}`);
     } catch (err) {
         console.error(err);
@@ -144,7 +144,7 @@ app.post('/saladas/:id/editar', async (req, res, next) => {
         const sql = "UPDATE `salads` SET `name` = ?, `size` = ?, `price` = ? WHERE `id` = ?;";
         const values = [name, size, price, id];
         const [rows] = await pool.query(sql, values);
-        
+
         // console.log(rows);
 
         res.redirect(`/saladas/${id}`);
@@ -157,13 +157,13 @@ app.post('/saladas/:id/editar', async (req, res, next) => {
 // products destroy/delete
 app.post('/saladas/:id/deletar', async (req, res, next) => {
     try {
-        const { id} = req.params;
+        const { id } = req.params;
         const sql = `DELETE FROM salads WHERE id = ?;`;
         const values = [id];
         const [rows] = await pool.query(sql, values);
-        console.log (rows);
+        console.log(rows);
         return res.redirect('/');
-    }catch (err) {
+    } catch (err) {
         console.error(err);
         next(new Error('Ocorreu um erro ao deletar o produto.'));
     }
@@ -183,10 +183,11 @@ app.post('/usuarios/cadastrar', async (req, res, next) => {
 
         const sql = 'INSERT INTO user (name, email, password) VALUES (?, ?, ?);';
         const values = [name, email, password];
-        const [rows, fields] = await pool.query(sql, values);
-        
-        const  insertedId = rows.insertId;
-        res.redirect(`/usuarios/${insertedId}`);
+        const [rows] = await pool.query(sql, values);
+
+        const insertedId = rows.insertId;
+
+        res.redirect(`/`);
     } catch (err) {
         console.error(err);
         next(new Error('Ocorreu um erro ao cadastrar o usuário.'));
@@ -196,13 +197,13 @@ app.post('/usuarios/cadastrar', async (req, res, next) => {
 // user/delete
 app.post('/usuarios/:id/deletar', async (req, res, next) => {
     try {
-        const { id} = req.params;
+        const { id } = req.params;
         const sql = `DELETE FROM user WHERE id = ?;`;
         const values = [id];
         const [rows] = await pool.query(sql, values);
-        console.log (rows);
+        console.log(rows);
         return res.redirect('/');
-    }catch (err) {
+    } catch (err) {
         console.error(err);
         next(new Error('Ocorreu um erro ao deletar o usuário.'));
     }
@@ -231,7 +232,7 @@ app.use(function (err, req, res, next) {
 
 const port = 3000;
 app.listen(port, () => {
- console.log(`Servidor ouvindo na porta ${port}`);
+    console.log(`Servidor ouvindo na porta ${port}`);
 });
 
 
