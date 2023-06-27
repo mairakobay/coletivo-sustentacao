@@ -1,0 +1,35 @@
+
+
+<section class="crud-editar" id="editar">
+         
+    <fieldset class="content-editar">
+        <div class="titulo-editar">
+            <h3>Editar Produtos</h3>
+        </div>
+      
+        <div class="editarprodutos">
+            <form action="/saladas/editar" method="post">
+                <label class="nome-produto">
+                    <input type="text" name="name" id="name" placeholder="Nome do produto" value="<%= product.name %>">
+                </label>
+
+                <label class="preco-tamanho">
+                    <div class="preco-produto">
+                        <input type="number" name="price" id="price" placeholder="Preço" value="<%= product.price %>">
+                    </div>
+                    <div class="tamanho-produto">
+                        <input type="text" name="size" id="size" placeholder="Tamanho" value="<%= product.size %>">
+                    </div>
+                </label>
+
+                <button class="submit" type="submit">Editar</button>
+            </form>
+        </div>
+
+    </fieldset>
+</section>
+
+<p><a href="/">Voltar</a></p>
+</div>
+
+

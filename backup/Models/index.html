@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coletivo SustentAção</title>
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Poppins:wght@500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a class="logo"><img src="public/images/Logo.svg"></a>
+
+        <ul class="navbar">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="salad.html">Produtos</a></li>
+            <li><a href="services.html">Serviços</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+
+        <div class="topnav">
+            <a href="#" class="cart"><i class="ri-shopping-cart-line"></i>Carrinho</a>
+            <a href="login.html" class="user"><i class="ri-user-line"></i></i>Conta</a>
+
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="content-slides">
+
+            <div class="slides">
+
+                <input class="radio" type="radio" name="slide" id="slide1" checked>
+                <input class="radio" type="radio" name="slide" id="slide2">
+                <input class="radio" type="radio" name="slide" id="slide3">
+                <input class="radio" type="radio" name="slide" id="slide4">
+
+                <div class="slide s1">
+                    <img src="public/images/banner1.svg" alt="Salada" />
+                </div>
+                <div class="slide">
+                    <img src="public/images/maos.svg" alt="Mudas" />
+                </div>
+                <div class="slide">
+                    <img src="public/images/Caraguatatuba.svg" alt="Caraguatatuba" />
+                </div>
+                <div class="slide">
+                    <img src="public/images/sustentabilidade.svg" alt="Sustentabilidade" />
+                </div>
+
+                <div class="navigation">
+                    <label class="bar" for="slide1"></label>
+                    <label class="bar" for="slide2"></label>
+                    <label class="bar" for="slide3"></label>
+                    <label class="bar" for="slide4"></label>
+                </div>
+
+            </div>
+        </div>
+
+        
+        <!-- Carrossel -->
+        <section class="topic">
+            <div class="topic-menu">
+                <a href="salad.html">
+                    <img src="public/images/saladas.svg" alt="Saladas">
+                </a>
+                <p>Saladas</p>
+            </div>
+            <div class="topic-menu">
+                <a href="pancs.html">
+                    <img src="public/images/pancs.svg">
+                </a>
+                <p>PANCs</p>
+            </div>
+            <div class="topic-menu">
+                <a href="services.html">
+                    <img src="public/images/mudas.svg">
+                </a>
+                <p>Mudas</p>
+            </div>
+            <div class="topic-menu">
+                <a href="services.html">
+                    <img src="public/images/monitoria.svg">
+                </a>
+                <p>Monitoria Ambiental</p>
+            </div>
+            <div class="topic-menu">
+                <a href="services.html">
+                    <img src="public/images/licenciamento.svg">
+                </a>
+                <p>Licenciamento</p>
+                <P>Ambiental</P>
+            </div>
+        </section>
+        <!-- Fim Carrossel -->
+
+        <!-- Destaques -->
+        <div class="item-title">
+            <h1>Destaques</h1><br>
+        </div>
+        <section class="container">
+            <div class="item">
+                <a href="salad.html">
+                    <img src="public/images/refrescante.svg" alt="Refrescante">
+                </a>
+                <p>Refrescante</p>
+            </div>
+            <div class="item">
+                <a href="salad.html">
+                    <img src="public/images/capuchinha.svg" alt="Capuchinha">
+                </a>   
+                <p>Capuchinha</p>
+            </div>
+            <div class="item">
+                <a href="salad.html">
+                    <img src="public/images/oriental.png" alt="Oriental">
+                </a>
+                <p>Oriental</p>
+            </div>
+            <div class="item">
+                <a href="salad.html">
+                    <img src="public/images/mixbacon.svg" alt="Mixbacon">
+                </a>
+                <p>Mix bacon</p>
+            </div>
+            <div class="item">
+                <a href="salad.html">
+                    <img src="public/images/crocante2.svg" alt="Crocante">
+                </a>
+                <p>Crocante</p>
+            </div>
+        </section>
+        <!-- Fim Destaques -->
+
+        <!-- Contato-->
+        <section class="contact" id="contato">
+            <fieldset class="inform">
+                <div class="contact-inf">
+                    <h2>Entre em contato</h2>
+                    <p>Para dúvidas, sugestões e comentários.</p>
+                    <p class="p1"><i class='bx bxl-whatsapp'></i> (12) 98765-4321
+                    <p class="p2"><i class='bx bx-envelope'></i> coletivosustentacao@gmail.com</p>
+                </div>
+
+                <div class="form">
+                    <form method="post">
+                        <label class="complet_name">
+                            <input type="text" name="complet_name" placeholder="Nome completo">
+                        </label>
+
+                        <label class="email_tel">
+                            <div class="email">
+                                <input type="text" name="email" placeholder="E-mail">
+                            </div>
+                            <div class="tel">
+                                <input type="text" name="tel" placeholder="Telefone">
+                            </div>
+                        </label>
+
+                        <label class="subject">
+                            <input type="text" name="subject" placeholder="Assunto">
+                        </label>
+
+                        <label class="comment">
+                            <textarea name="comment" placeholder="Mensagem" cols="60" rows="6"></textarea>
+                        </label>
+
+                        <button class="submit" type="submit">Enviar</button>
+                    </form>
+                </div>
+            </fieldset>
+        </section>
+        <!-- Fim Contato -->
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <div id="footer_content">
+            <div id="footer_logo">
+                <img src="public/images/logo_footer3.jpg">
+            </div>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Menu</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">A empresa</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Sobre nós</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Pagamento</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Fale conosco</a>
+                </li>
+            </ul>
+                    
+            <ul class="footer-list">
+                <li>
+                    <h3>Produtos</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Saladas</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">PANCs</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Mudas</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Serviços</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Educação Ambiental</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Monitoria Ambiental</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Licenciamento Ambiental</a>
+                </li>
+            </ul>
+
+            <div id="footer_contacts">
+                <h3>Redes Sociais</h3>
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link" id="facebook">
+                        <i class='bx bxl-facebook-circle'></i>
+                    </a>
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                    <a href="#" class="footer-link" id="youtube">
+                        <i class="ri-youtube-fill"></i>
+                    </a>
+                    <a href="#" class="footer-link" id="twitter">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                </div>
+            </div> <!-- footer_contacts -->
+        </div> <!-- content -->
+    
+        <div id="footer_copyright">
+            &#169
+            2023 - Coletivo SustentAção. Todos os direitos reservados.
+        </div>
+    </footer> 
+    <!-- Fim Rodapé-->
+
+    <!--js link-->
+    <script type="text/javascript" src="js/script.js"></script> 
+    <script src="js/login.js"></script>
+</body>
+
+</html>

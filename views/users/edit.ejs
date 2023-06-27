@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizar Usuário</title>
+</head>
+
+<body>
+    <h1>Atualizar Usuário</h1>
+
+    <form method="post" action="/usuarios/atualizar/<%= user?.id %>">
+        <div>
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" value="<%= user?.name %>">
+        </div>
+
+        <div>
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password">
+        </div>
+
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" value="<%= user?.email %>">
+        </div>
+
+        <div>
+            <input type="submit" value="Atualizar">
+        </div>
+    </form>
+
+    <ul>
+        <li><a href="/usuarios">Lista de Usuários</a></li>
+        <li><a href="/usuarios/cadastrar">Cadastrar Usuário</a></li>
+        <li><a href="/usuarios/exibir/<%= user.id %>">Exibir Usuário</a></li>
+        <li><a href="/usuarios/deletar/<%= user.id %>">Deletar Usuário</a></li>
+    </ul>
+
+</body>
+
+</html>

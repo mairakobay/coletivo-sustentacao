@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Usuário</title>
+</head>
+<body>
+    <h1>Exibir Usuário</h1>
+    
+    <div>        
+        <p><b>ID:</b> <%= user.id %></p>
+        <p><b>Nome:</b> <%= user.name %></p>
+        <p><b>Email:</b> <%= user.email %></p>
+        <p><b>Estado:</b> <%= user.status %></p>
+        <p><b>Data Cadastro:</b> <%= user.createdAt %></p>
+        <p><b>Data da Última Atualização:</b> <%= user.updatedAt || "Nenhuma atualização realizada." %></p>      
+    </div>
+
+    <ul>
+        <li><a href="/usuarios">Lista de Usuários</a></li>
+        <li><a href="/usuarios/cadastrar">Cadastrar Usuário</a></li>
+        <li><a href="/usuarios/atualizar/<%= user.id %>">Atualizar Usuário</a></li>
+        <li><a href="/usuarios/deletar/<%= user.id %>">Deletar Usuário</a></li>
+    </ul>
+</body>
+</html>

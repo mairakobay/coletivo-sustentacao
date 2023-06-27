@@ -1,0 +1,21 @@
+<h2>Produtos</h2>
+
+<div class="product">
+    <h3><%= product.name %></h3>
+    
+    <p>Código: <%= product.id %></p>
+    <p>Preço: R$ <%= product.price %></p>
+    <p>Tamanho: <%= product.size %></p>
+
+    <p><a href="/">Voltar</a></p>
+    <p>
+        <form action="/saladas/<%= product.id %>/deletar" method="post">
+            <input type="submit" value="Deletar"> </form>
+    </p>
+
+    <a href="/saladas/<%= product.id %>/editar">Editar</a>
+</div>
+
+
+
+

@@ -1,0 +1,36 @@
+
+    <h1>Listar Usuários</h1>
+    
+    <table border>
+        <thead>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Data Cadastro</th>
+            <th>Data da Última Atualização</th>
+            <th>Ações</th>
+        </thead>
+        <tbody>
+            <% for (const user of users) { %>
+                <tr>
+                    <td><%= user.id %></td>
+                    <td><%= user.name %></td>
+                    <td><%= user.email %></td>
+                    <td><%= user.status %></td>
+                    <td><%= user.createdAt %></td>
+                    <td><%= user.updatedAt %></td>
+                    <td>
+                        <ul>
+                            <li><a href="/usuarios/atualizar/<%= user.id %>">Atualizar</a></li>
+                            <li><a href="/usuarios/deletar/<%= user.id %>">Deletar</a></li>
+                            <li><a href="/usuarios/exibir/<%= user.id %>">Exibir</a></li>
+                        </ul>
+                    </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+    <p>
+        <a href="/usuarios/cadastrar">Cadastrar Usuário</a>
+    </p>

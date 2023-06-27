@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela de Login</title>
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Poppins:wght@500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+</head>
+
+<body>
+    <header>
+        <a class="logo"><img src="images/Logo.svg"></a>
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="products.html">Produtos</a></li>
+            <li><a href="services.html">Serviços</a></li>
+            <li><a href="index.html">Contato</a></li>
+        </ul>
+
+        <div class="topnav">
+            <a href="#" class="cart"><i class="ri-shopping-cart-line"></i>Carrinho</a>
+            <a href="login.html" class="user"><i class="ri-user-line"></i></i>Conta</a>
+
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Bem-vindo de volta!</h2>
+                <p class="description description-primary">Acesse sua conta agora mesmo!</p>
+                <button id="signin" class="btn btn-primary">Entrar</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second">Crie sua conta!</h2>
+                
+                <form class="form">
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input type="text" placeholder="Nome">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="Email">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Senha">
+                    </label>
+
+                    <button class="btn btn-second">Cadastrar</button>
+                </form>
+            </div><!-- second column -->
+        </div><!-- first content -->
+
+        <div class="content second-content">
+            <div class="first-column">
+                <h2 class="title title-primary">Olá, visitante!</h2>
+                <p class="description description-primary">Insira seus dados</p>
+                <p class="description description-primary">e faça o cadastro em nosso site.</p>
+                <button id="signup" class="btn btn-primary">Entrar</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second">Acesse sua conta</h2>
+                
+                <form class="form">
+
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input type="email" placeholder="Email">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input type="password" placeholder="Senha">
+                    </label>
+
+                    <a class="password" href="#">Esqueceu sua senha?</a>
+                    <button class="btn btn-second">Entrar</button>
+                </form>
+            </div><!-- second column -->
+        </div><!-- second-content -->
+    </div>
+
+
+    <!-- Rodapé -->
+    <footer>
+        <div id="footer_content">
+            <div id="footer_logo">
+                <img src="images/logo_footer3.jpg">
+            </div>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Menu</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">A empresa</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Sobre nós</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Pagamento</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Fale conosco</a>
+                </li>
+            </ul>
+                    
+            <ul class="footer-list">
+                <li>
+                    <h3>Produtos</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Saladas</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">PANCs</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Mudas</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Serviços</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Educação Ambiental</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Monitoria Ambiental</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Licenciamento Ambiental</a>
+                </li>
+            </ul>
+
+            <div id="footer_contacts">
+                <h3>Redes Sociais</h3>
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link" id="facebook">
+                        <i class='bx bxl-facebook-circle'></i>
+                    </a>
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                    <a href="#" class="footer-link" id="youtube">
+                        <i class="ri-youtube-fill"></i>
+                    </a>
+                    <a href="#" class="footer-link" id="twitter">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                </div>
+            </div> <!-- footer_contacts -->
+        </div> <!-- content -->
+    
+        <div id="footer_copyright">
+            &#169
+            2023 - Coletivo SustentAção. Todos os direitos reservados.
+        </div>
+    </footer> 
+    <!-- Fim Rodapé-->
+
+    <!--js link-->
+    <script type="text/javascript" src="js/script.js"></script> 
+    <script src="js/login.js"></script>
+</body>
+
+</html>

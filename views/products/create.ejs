@@ -1,0 +1,32 @@
+
+    <section class="crud-cadastrar" id="cadastrar">
+         
+        <fieldset class="content-cadastrar">
+            <div class="titulo-cadastrar">
+                <h3>Cadastrar Produtos</h3>
+            </div>
+          
+            <div class="cadastrarprodutos">
+                <form action="/saladas/cadastrar" method="post">
+                    <label class="nome-produto">
+                        <input type="text" name="name" id="name" placeholder="Nome do produto">
+                    </label>
+
+                    <label class="preco-tamanho">
+                        <div class="preco-produto">
+                            <input type="number" name="price" id="price" placeholder="Preço">
+                        </div>
+                        <div class="tamanho-produto">
+                            <input type="text" name="size" id="size" placeholder="Tamanho">
+                        </div>
+                    </label>
+
+                    <button class="submit" type="submit">Cadastrar</button>
+                </form>
+            </div>
+
+        </fieldset>
+    </section>
+
+    <p><a href="/">Voltar</a></p>
+</div>

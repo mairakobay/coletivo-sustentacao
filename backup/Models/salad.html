@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coletivo SustentAção</title>
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Poppins:wght@500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <a class="logo"><img src="public/images/Logo.svg"></a>
+
+        <ul class="navbar">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="products.html" class="active">Produtos</a></li>
+            <li><a href="services.html">Serviços</a></li>
+            <li><a href="index.html">Contato</a></li>
+        </ul>
+
+        <div class="topnav">
+            <a href="#" class="cartmenu"><i class="ri-shopping-cart-line"></i>Carrinho</a>
+            <a href="login.html" class="user"><i class="ri-user-line"></i></i>Conta</a>
+
+            <div class="bx bx-menu" id="menu-icon"></div>
+        </div>
+    </header>
+
+    <div class="models">
+        <div class="salad-item">
+            <a href="">
+                <div class="salad-item--img"><img src="" /></div>
+            </a>
+            <div class="salad-item--name">--</div>
+            <div class="salad-item--price">R$ --</div>
+            <div class="salad-item--add">+ informações</div>
+        </div>
+        <div class="cart--item">
+            <img src="" />
+            <div class="cart--item-nome">--</div>
+            <div class="cart--item--qtarea">
+                <button class="cart--item-qtmenos">-</button>
+                <div class="cart--item--qt">1</div>
+                <button class="cart--item-qtmais">+</button>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        
+        <div class="salad-container">
+            <div class="title">
+                <h1>Saladas</h1>
+            </div>
+            <div class="salad-area"></div>
+
+        </div>
+
+
+        <aside>
+            <div class="cart--area">
+                <div class="menu-closer">❌</div>
+                <h1>Resumo da compra</h1>
+                <div class="cart"></div>
+                <div class="cart--details">
+                    <div class="cart--totalitem subtotal">
+                        <span>Subtotal</span>
+                        <span>R$ --</span>
+                    </div>
+                    <div class="cart--totalitem desconto">
+                        <span>Desconto (-10%)</span>
+                        <span>R$ --</span>
+                    </div>
+                    <div class="cart--totalitem total big">
+                        <span>Total</span>
+                        <span>R$ --</span>
+                    </div>
+                    <div class="cart--finalizar">Fechar pedido</div>
+                </div>
+            </div>
+        </aside>
+
+    </main>
+
+    <div class="saladWindowArea">
+        <div class="saladWindowBody">
+            <div class="saladInfo--cancelMobileButton">Voltar</div>
+            <div class="saladBig">
+                <img src="" />
+            </div>
+            <div class="saladInfo">
+                <h1>--</h1>
+                <div class="saladInfo--desc">--</div>
+                <div class="saladInfo--sizearea">
+                    <div class="saladInfo--sector">Tamanho</div>
+                    <div class="saladInfo--sizes">
+                        <div data-key="0" class="saladInfo--size">PEQUENA <span>--</span></div>
+                        <div data-key="1" class="saladInfo--size">MÉDIO <span>--</span></div>
+                        <div data-key="2" class="saladInfo--size selected">GRANDE <span>--</span></div>
+                    </div>
+                </div>
+                <div class="saladInfo--pricearea">
+                    <div class="saladInfo--sector">Preço</div>
+                    <div class="saladInfo--price">
+                        <div class="saladInfo--actualPrice">R$ --</div>
+                        <div class="saladInfo--qtarea">
+                            <button class="saladInfo--qtmenos">-</button>
+                            <div class="saladInfo--qt">1</div>
+                            <button class="saladInfo--qtmais">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="saladInfo--addButton">Adicionar ao carrinho</div>
+                <div class="saladInfo--cancelButton">Cancelar</div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="salads.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+
+
+
+
+    <!-- Rodapé -->
+    <footer>
+        <div id="footer_content">
+            <div id="footer_logo">
+                <img src="public/images/logo_footer3.jpg">
+            </div>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Menu</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">A empresa</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Sobre nós</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Pagamento</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Fale conosco</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Produtos</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Saladas</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">PANCs</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Mudas</a>
+                </li>
+            </ul>
+
+            <ul class="footer-list">
+                <li>
+                    <h3>Serviços</h3>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Educação Ambiental</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Monitoria Ambiental</a>
+                </li>
+                <li>
+                    <a href="#" class="footer-link">Licenciamento Ambiental</a>
+                </li>
+            </ul>
+
+            <div id="footer_contacts">
+                <h3>Redes Sociais</h3>
+                <div id="footer_social_media">
+                    <a href="#" class="footer-link" id="facebook">
+                        <i class='bx bxl-facebook-circle'></i>
+                    </a>
+                    <a href="#" class="footer-link" id="instagram">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                    <a href="#" class="footer-link" id="youtube">
+                        <i class="ri-youtube-fill"></i>
+                    </a>
+                    <a href="#" class="footer-link" id="twitter">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                </div>
+            </div> <!-- footer_contacts -->
+        </div> <!-- content -->
+
+        <div id="footer_copyright">
+            &#169
+            2023 - Coletivo SustentAção. Todos os direitos reservados.
+        </div>
+    </footer>
+    <!-- Fim Rodapé-->
+
+    <!--js link-->
+    <script type="text/javascript" src="js/salads.js"></script>
+    <script type="text/javascript" src="js/salad.js"></script> 
+    
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<div class="crud-container">
+    <div class="crud">
+        <h1>Saladas CRUD</h1>
+    </div>
+</div>
+
+<div clas="produtos">
+
+    <div class="produto">
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Produto</th>
+                    <th>Preco</th>
+                    <th>Tamanho</th>
+                    <th class="acao">Editar</th>
+                    <th class="acao">Excluir</th>
+                </tr>
+                <% for (const produto of produtos) { %>
+                    <tr>
+                        <td>
+                            <%= produto.id %>
+                        </td>
+                        <td>
+                            <%= produto.name %>
+                        </td>
+                        <td>R$ <%= produto.price %>
+                        </td>
+                        <td>
+                            <%= produto.size %>
+                        </td>
+                        <td>
+                            <a href="/saladas/<%= produto.id %>">
+                                <button class="edit"><i class='bx bx-edit'></i></i></button>
+                        <td>
+                            <button class="removes"><i class='bx bx-trash'></i></i></button>
+                        </td>
+                    </tr>
+                    <% } %>
+            </thead>
+        </table>
+
+    </div>
+</div>

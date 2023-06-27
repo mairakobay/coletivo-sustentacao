@@ -1,0 +1,124 @@
+// requirements
+var createError = require('http-errors');
+const express = require('express');
+const expressEjsLayouts = require('express-ejs-layouts');
+const mysql = require('mysql2/promise');
+
+// app configuration
+const app = express();
+
+// template engine configuration
+app.use(expressEjsLayouts);
+app.set('layout', './layouts/fixed-width-layout.ejs');
+app.set('view engine', 'ejs');
+
+// serving static files 
+app.use(express.static('public'));
+
+// form body data
+app.use(express.urlencoded({ extended: false }));
+
+// database configuration
+const pool = mysql.createPool({
+    host: 'localhost',
+    user: 'root',
+    password: '',
+    database: 'mydb'
+});
+
+// products routes
+
+// products index/list
+app.get('/produtos', async (req, res, next) => {
+    try {
+        const sql = `SELECT * FROM product;`;
+        const [rows] = await pool.query(sql);
+
+        res.render('products/index', { products: rows });
+    } catch (err) {
+        console.error(err);
+        next(new Error('Ocorreu um erro ao carregar os dados dos produtos.'));
+    }
+});
+
+// products create/new
+app.get('/produtos/cadastrar', async (req, res, next) => {
+    res.render('products/create');
+});
+
+// products store/save
+app.post('/produtos/cadastrar', async (req, res, next) => {
+    try {
+        const { name, price } = req.body;
+
+        const sql = 'INSERT INTO product (name, price) VALUES (?, ?);';
+        const values = [name, price];
+        const [rows, fields] = await pool.query(sql, values);
+
+        const { insertedId } = rows.insertId;
+        res.redirect(`/produtos/${insertedId}`);
+    } catch (err) {
+        console.error(err);
+        next(new Error('Ocorreu um erro ao cadastrar o produto.'));
+    }
+});
+
+// products show/details
+app.get('/produtos/:id', async (req, res, next) => {
+    try {
+        const { id } = req.params;
+
+        const sql = `SELECT * FROM product WHERE id = ?;`;
+        const values = [id];
+        const [rows] = await pool.query(sql, values);
+
+        if (rows.length === 0) {
+            next(createError(404));
+        }
+
+        return res.render('products/show', { product: rows[0] });
+    } catch (err) {
+        console.error(err);
+        next(new Error('Ocorreu um erro ao carregar os dados do produto.'));
+    }
+});
+
+// products edit
+app.get('/produtos/:id/editar', async (req, res, next) => {
+    res.render('products/edit');
+});
+
+// products update
+app.post('/produtos/:id/editar', async (req, res, next) => {
+
+});
+
+// products destroy/delete
+app.post('/produtos/:id/deletar', async (req, res, next) => {
+
+});
+
+// catch 404 and forward to error handler
+app.use(function (req, res, next) {
+    next(createError(404));
+});
+
+// error handler
+app.use(function (err, req, res, next) {
+    res.locals.message = err.message;
+    res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+    res.status(err.status || 500);
+    if (err.status === 404) {
+        res.render('404');
+    } else {
+        res.render('error');
+    }
+});
+
+// server
+const port = 3000;
+app.listen(port, () => {
+    console.log(`Servidor ouvindo na porta ${port}`);
+});
+
